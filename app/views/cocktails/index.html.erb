@@ -1,9 +1,25 @@
 <h1>My Cocktails</h1>
 
-<ul class="cocktail-list">
+<div class="cards-cocktails row">
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <div class="col-xs-6 col-sm-4">
+      <div class="cocktail-card">
+        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path(['cocktail1.jpg', 'cocktail2.jpg', 'cocktail3.jpg', 'cocktail4.jpg', 'cocktail5.jpg', 'cocktail6.jpg', 'cocktail7.jpg'].sample) %>);">
+          <h5><%= cocktail.name %></h5>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-bottom">
+        <%= link_to "More info", cocktail_path(cocktail), class: "info-link" %>
+        <%= link_to cocktail_path(cocktail), method: :delete do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
-
-<%=link_to "+ Add a cocktail", cocktails_new_path %>
+</div>

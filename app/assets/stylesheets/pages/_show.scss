@@ -1,0 +1,14 @@
+.cocktail-info {
+  display:flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#bin-link {
+  color: #333333;
+}
+
+#bin-link:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
