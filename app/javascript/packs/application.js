@@ -7,3 +7,7 @@ initSelect2();
 
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
+
+
+import { ingredientsOnHover } from '../components/ingredients_on_hover';
+ingredientsOnHover();
