@@ -4,7 +4,7 @@
   <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="cocktail-card">
-        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path(['cocktail1.jpg', 'cocktail2.jpg', 'cocktail3.jpg', 'cocktail4.jpg', 'cocktail5.jpg', 'cocktail6.jpg', 'cocktail7.jpg'].sample) %>);">
+        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo, height: 160,crop: :fill %>');">
           <h5><%= cocktail.name %></h5>
           <div class="stars">
             <i class="fas fa-star"></i>
