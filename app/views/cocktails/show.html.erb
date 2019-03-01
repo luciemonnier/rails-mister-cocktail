@@ -6,6 +6,8 @@
     <h3>Description:</h3>
     <div class="description-text"><%= @cocktail.description %></div>
     <br>
+    <%= link_to "Edit description", edit_cocktail_path(@cocktail), class: 'btn btn-ghost btn-sm' %>
+    <br>
     <br>
     <h3>Ingredients: </h3>
     <div class="ingredients-list">

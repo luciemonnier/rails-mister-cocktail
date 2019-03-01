@@ -23,6 +23,9 @@
     <% if params[:controller] == 'cocktails' && params[:action] == 'index' %>
       <%= render 'shared/banner_index' %>
     <% end %>
+    <% if params[:controller] == 'cocktails' && params[:action] == 'edit' %>
+      <%= render 'shared/banner_edit_description' %>
+    <% end %>
     <div class="container">
       <%= yield %>
     </div>
